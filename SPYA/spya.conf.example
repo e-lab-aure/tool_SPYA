@@ -1,0 +1,35 @@
+# spya.conf.example — Configuration SPYA
+# Copier vers /etc/spya.conf ou ~/.config/spya/spya.conf
+# puis renseigner les adresses MAC de votre installation.
+# Obtenir les MACs des adaptateurs : hciconfig -a
+# Obtenir le MAC du casque : bluetoothctl devices
+
+[spya]
+
+# ─── Adaptateurs Bluetooth ────────────────────────────────────────────────────
+
+# Adaptateur HCI côté casque (dongle branché qui se connecte au casque)
+adapter_headset_hci = hci0
+adapter_headset_mac = XX:XX:XX:XX:XX:XX
+
+# Adaptateur HCI côté terminal (dongle branché qui se connecte au PC/smartphone)
+adapter_terminal_hci = hci1
+adapter_terminal_mac = XX:XX:XX:XX:XX:XX
+
+# ─── Casque cible ─────────────────────────────────────────────────────────────
+
+# Adresse MAC du casque Bluetooth (utilisé par bt_connect_watch.sh et WirePlumber)
+headset_mac = XX:XX:XX:XX:XX:XX
+
+# ─── Répertoires ──────────────────────────────────────────────────────────────
+
+# Répertoire de stockage des enregistrements WAV
+rec_dir = /home/pi/recordings
+
+# Fichier de log applicatif
+log_file = /home/pi/SPYA/spya.log
+
+# ─── Interface ────────────────────────────────────────────────────────────────
+
+# Largeur de la TUI en caractères (adapter si terminal étroit)
+tui_width = 54

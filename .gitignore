@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+env/
+
+# Logs et enregistrements (données locales)
+*.log
+recordings/
+*.wav
+
+# Configuration locale (contient des adresses MAC spécifiques à l'installation)
+spya.conf
+SPYA/spya.conf
+
+# Fichiers de sauvegarde
+*.bak
+*.orig
+*.swp
+*.swo
+
+# Directives développement (usage local uniquement)
+CLAUDE.md
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
