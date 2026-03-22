@@ -1,0 +1,15 @@
+# Service systemd --user pour la surveillance du profil HFP Jabra
+# Place: ~/.config/systemd/user/bt-watch.service
+# Activation: systemctl --user enable --now bt-watch
+
+[Unit]
+Description=Jabra HFP profile watcher
+After=pipewire.service wireplumber.service
+
+[Service]
+ExecStart=/home/prelude/SPYA/bt_connect_watch.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
