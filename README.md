@@ -1,6 +1,6 @@
 # SPYA — Bluetooth Audio Proxy : Capture Hardware de Flux Audio
 
-> **S**ystème **P**hone **Y**our **A**udio — Proxy Bluetooth transparent entre n'importe quel terminal (PC, smartphone, tablette) et n'importe quel casque/écouteur, avec capture hardware des flux audio entrant et sortant.
+> Proxy Bluetooth transparent entre n'importe quel terminal (PC, smartphone, tablette) et n'importe quel casque/écouteur, avec capture hardware des flux audio entrant et sortant.
 
 ---
 
@@ -56,14 +56,14 @@ Du point de vue du terminal (PC, smartphone), le proxy est un périphérique aud
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Terminal                                │
-│   (PC, laptop, smartphone, tablette — tout système BT)         │
+│   (PC, laptop, smartphone, tablette — tout système BT)          │
 │                                                                 │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐      │
-│  │ Teams/Zoom   │    │ Téléphonie   │    │ Musique      │      │
-│  │ (visio)      │    │ (mobile/VoIP)│    │ (streaming)  │      │
-│  └──────┬───────┘    └──────┬───────┘    └──────┬───────┘      │
-│         └──────────────────┴──────────────────┘              │
-│                             │  Audio BT (A2DP / HFP)           │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐       │
+│  │ Teams/Zoom   │    │ Téléphonie   │    │ Musique      │       │
+│  │ (visio)      │    │ (mobile/VoIP)│    │ (streaming)  │       │
+│  └──────┬───────┘    └──────┬───────┘    └──────┬───────┘       │
+│         └──────────────────┴──────────────────┘                 │
+│                             │  Audio BT (A2DP / HFP)            │
 └─────────────────────────────┼───────────────────────────────────┘
                               │
                    ┌──────────▼──────────┐
@@ -117,14 +117,14 @@ Le signal audio, une fois sorti du terminal vers le périphérique Bluetooth, **
 
 ```
           ┌──────────────────────────────────────┐
-          │          Terminal source              │
+          │          Terminal source             │
           │  (PC / smartphone / tablette / etc.) │
           └──────────────────┬───────────────────┘
                              │
                    Bluetooth A2DP / HFP
                    (profils audio classiques)
                              │
-          ┌──────────────────▼───────────────────┐
+          ┌──────────────────▼────────────────────┐
           │              PROXY SPYA               │
           │                                       │
           │  Adaptateur BT #1 ←→ Terminal         │
@@ -138,12 +138,12 @@ Le signal audio, une fois sorti du terminal vers le périphérique Bluetooth, **
           │         pw-record (capture)           │
           │                 │                     │
           │         ~/recordings/*.wav            │
-          └──────────────────┬───────────────────┘
+          └──────────────────┬────────────────────┘
                              │
                    Bluetooth A2DP / HFP
                              │
           ┌──────────────────▼───────────────────┐
-          │       Casque / Écouteurs BT           │
+          │       Casque / Écouteurs BT          │
           │  (tout périphérique audio classique) │
           └──────────────────────────────────────┘
 ```
@@ -269,7 +269,7 @@ Contrôle complet via SSH, sans interface graphique :
 ║  hci1 A0:AD:9F:73:C5:49  Terminal  UP                ║
 ║   ● Mon PC / Smartphone      [conn]                  ║
 ╠══════════════════════════════════════════════════════╣
-║  ⏺  REC  03:42                                       ║
+║    ●REC  03:42                                       ║
 ╠══════════════════════════════════════════════════════╣
 ║  [1] Connecter un peripherique                       ║
 ║  [2] Visible terminal       (hci1)                   ║
